@@ -1,9 +1,11 @@
 body {
-
+    --radius: 10px;
 }
 .container {
     padding: 0;
-    background-color: #f3f2ee;
+    max-width: 600px;
+    /* background-color: #f3f2ee; */
+    background-color: #f3f2ee52;
     height: 100vh;
     position: relative;
     z-index: 0;
@@ -14,7 +16,7 @@ body {
     justify-content: start;
 }
 .content {
-    padding: 25px 0;
+    padding: 54px 0;
     position: relative;
     z-index: 0;
 }
@@ -22,31 +24,36 @@ body {
     padding: 0 8px;
 }
 .content_inputs {
-    padding: 0 8px;
+    padding: 0 38px;
+    padding: 0 12px;
     width: 100%;
 }
 .input_select {
     display: flex;
     flex-direction: row;
     gap: 0px;
-    margin: 0 0 23px 0;
+    /* margin: 0 0 23px 0; */
+    margin: 0 0 27px 0;
+    /* box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.282) inset; */
+    /* box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.282); */
 }
 .content_btn_apply {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 45px;
+    min-height: 63px;
     margin: auto;
     color: azure;
     text-align: center;
-    background-color: rgb(223, 163, 95);
+    background-color: rgba(164, 12, 52, 0.883);
+    background-color: rgb(14 12 164 / 74%);
     /* rgba(223, 148, 88, 0.795); */
     /* border-radius: 8px; */
     cursor: pointer;
 }
 .applyBtn_clicked {
-    background-color: rgb(219, 156, 85);
+    background-color: rgba(141, 19, 51, 0.883);
 }
 .applyBtn_wrapper {
     display: flex;
@@ -61,7 +68,7 @@ body {
     width: 100%;
     /* background-color: coral; */
     z-index: 999;
-    max-width: 470px;
+    max-width: 580px;
     margin: auto;
     border-top: 1px rgb(212, 212, 212) solid;
 }
@@ -71,42 +78,44 @@ select, input {
     /* height: 42px; */
     appearance: none;
     /* box-shadow: 0px 4px 4px -4px rgba(34, 60, 80, 0.1); */
-    color: rgb(138, 138, 138);
     background-color: #f7f7f7;
 }
 input {
     background-color: #ffffff;
     width: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-left: 1px solid rgb(209, 209, 209);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    border-left: 2px solid rgba(209, 209, 209, 0);
     border-right:  none;
-    border-top:  1px solid rgb(209, 209, 209);
+    border-top:  2px solid rgba(209, 209, 209, 0);
     border-bottom:  1px solid rgb(209, 209, 209);
+    /* border-bottom:  2px solid rgb(159, 159, 159); */
 }
 input:focus-within ~ select {
         color: rgb(255, 255, 255);
         /* background: rgb(75, 83, 192); */
-        background: #0077FF;
+        background: #00000090;
         border-color: none;
     }
 select {
-    padding: 0 15px 0 18px ;
-    background-color: #f7f7f7;
+    padding: 0 12px 0 10px;
+    background-color: #d9d9d9;
+    color: rgba(0, 0, 0, 0.774);
     width: fit-content;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
     border-left: 1px solid rgba(209, 209, 209, 0.568);
     border-right:  1px solid rgb(209, 209, 209);
     border-top:  1px solid rgb(209, 209, 209);
     border-bottom:  1px solid rgb(209, 209, 209);
+    border-bottom:  2px solid rgb(159, 159, 159);
 }
 .input_select {
     background-color: #f7f7f7;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
     /* width: fit-content; */
     position: relative;
 }
@@ -136,4 +145,8 @@ select {
     transition: transform .28s ease, color .28s linear, opacity .28s linear;
     will-change: transform, color, opacity;
     cursor: text;
+}
+
+.row {
+    display: flex;
 }
